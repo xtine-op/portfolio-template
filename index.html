@@ -1,0 +1,68 @@
+<!-- This is a portfolio page i have done to better my styling skills.
+     The main highlights are the typing effect and gradients.First coding sunday btw after a pretty long time
+ -->
+ <!-- TODO -->
+ <!-- INCLUDE BOOTSTRAP TO MAKE RESPONSIVE -->
+ <!-- SOURCE FOR IMAGES( BG BRUSH STROKE) -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+ </head>
+ <body>
+    <div class="container">
+        <nav>
+            <div class="logo">Chris <b>.</b></div>
+            <ul class="navItems">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+            <div class="links">
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+            </div>
+        </nav>
+        <!-- MULTITEXT SECTION -->
+
+        <div class="wrapper">
+            <div class="cols cols0">
+                <span class="topline">Hello</span>
+                <h1>I'm <span class="multitext">Coder</span></h1>
+                <p>Lorem, ipsum dolor sit ametLorem, ipsum dolor sit ametLorem, ipsum dolor sit ametLorem, ipsum dolor sit ametLorem, ipsum dolor sit amet</p>
+                <div class="btns">
+                    <button>Download CV</button>
+                    <button>Hire Me</button>
+                </div>
+            </div>
+            <div class="cols cols1"></div>
+            <div class="imgbox">
+                <!-- <img src="splash.png" id="splash"> -->
+                <img src="cuter.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- MULTITEXT JS CODE -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typingEffect = new Typed(".multitext", {
+            strings:["coder", "Mentor","Designer"],
+            loop:true,
+            typeSpeed:100,
+            backSpeed: 80,
+            backDelay:1500
+        })
+    </script>
+
+    
+ </body>
+ </html>
