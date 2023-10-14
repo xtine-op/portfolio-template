@@ -12,24 +12,22 @@ body{
 
 }
 
-.container{
+.containers{
     width: 100%;
     min-height: 100vh;
     background-color: #f3f5f8;
 }
 
 nav{
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    height:80px;
-    line-height: 80px;
-    z-index: 111;
+    position: fixed;
+    padding-left: 110px;
+    padding-right: 30px;
+    line-height: 50px;
 }
 
 .logo{
     display: flex;
-    font-size: 40px;
+    font-size: 20px;
     font-weight: 800;
     color: #3d535f;
     letter-spacing:3px;
@@ -37,7 +35,7 @@ nav{
     text-transform:uppercase ;
 }
 b{
-    font-size: 70px;
+    font-size: 30px;
     color:#7f00ff;
 
 }
@@ -49,7 +47,7 @@ b{
     margin: 0 15px;
 }
 .navItems li a{
-    font-size: 20px;
+    font-size: 14px;
     color: #3d535f;
     letter-spacing: 3px;
     text-decoration: none;
@@ -62,7 +60,7 @@ b{
 }
 
 .links a{
-    font-size: 30px;
+    font-size: 16px;
     color: #3d535f;
     margin: 25px 10px;
 }
@@ -76,7 +74,7 @@ THE GRADIENT BALLS */
     height: calc(100vh -10px);
     justify-content: center;
     align-items: center;
-    padding: 0 10%;
+    padding: 0 8%;
     /* overflow: hidden; */
 }
 .wrapper::before{
@@ -100,7 +98,7 @@ THE GRADIENT BALLS */
     left: 35%;
     top: 12%;
     background: linear-gradient(45deg, #7f00ff, pink);
-    animation: object2 6s linear infinite;
+   
 }
 @keyframes object1{
     50%{
@@ -109,28 +107,16 @@ THE GRADIENT BALLS */
     }
 }
 
-@keyframes object2{
-    50%{
-        left: 35%;
-        top:12%;
-    }
-}
-
 
 /* MULTITEXT SECTION */
-.cols{
-    /* background-color:#3d535f; */
-    width: 200px;
-}
 .cols0{
-    width: 100%;
+    width: auto;
     z-index: 5;
 
 }
 .topline{
     display: block;
     position: relative;
-    font-size: 30px;
     letter-spacing: 5px;
     color:#3d535f;
     
@@ -138,15 +124,15 @@ THE GRADIENT BALLS */
 .topline::after{
     position: absolute;
     content: '';
-    height: 4px;
-    width: 45px;
+    height: 2px;
+    width: 30px;
     bottom: 10px;
     background-color:#7f00ff ;
 }
 
 h1{
     display: block;
-    font-size: 4em;
+    font-size: 48px;
     font-weight: 900;
     color: #3d535f;
 
@@ -154,37 +140,65 @@ h1{
 .multitext{
     color: #7f00ff;
     text-transform: capitalize;
+    
 }
 p{
     display: block;
     width: 100%;
-    font-size: 1.2em;
+    font-size:14px;
     color: #3d535f;
-    text-align: center;
+    line-height: 30px;
+    
 }
 .btns{
     width: 100%;
-    position: relative;
+    /* position: relative; */
     left: 50px;
 }
-button{
+.primarybtn{
+    width: 180px;
     outline: none;
     border: none;
     border-radius: 16px;
     cursor: pointer;
-    font-size: 25px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 600;
+   
+   
     color: #ffffff;
-    background-color: #3d535f;
-    padding: 10px 14px;
+    background-color: #7f00ff;
+    padding: 16px 12px;
     margin: 40px 5px;
     letter-spacing: 2px;
     text-transform: capitalize;
-    box-shadow:0 15px 10px rgba(0, 0, 0, 0.4);
 }
-button:hover{
-    background-color: #7f00ff;
+.primarybtn:hover{
+    background-color: #3d535f;
 }
+.secondarybtn{
+    width: 180px;
+    outline: 0.4px;
+    border: 0.5px;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    background-color:none;
+   
+   
+    color: #3d535f;
+   
+    padding: 16px 12px;
+    margin: 40px 5px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+
+}
+.secondarybtn:hover{
+    background-color:#3d535f;
+    color: #ffffff;
+}
+
 .imgbox{
     position: relative;
     width: 100%;
@@ -195,36 +209,103 @@ button:hover{
 
 .imgbox img{
     position: relative;
-    height: 100%;
+    height: 110%;
     width: 700px;
    
-    right:-150px;
-    animation: animateUser 4s linear infinite;
+    right:-100px;
+   
 }
-/* 
-@keyframes animateUser {
-    50%{
-        right:-150px;
-        top: 0px;
-    }
-    
-} */
 
-/* .imgbox #spash{
-    position: absolute;
+
+
+ /* TABLET SCREENS */
+@media (max-width: 1024px) {
+    nav{
+        padding-left: 30px;
+        padding-right: 30px;
+        line-height: 50px;
+    }
+    /* MULTITEXT SECTION */
+.cols0{
+    margin-top: 48px;
+    width: auto;
+    z-index: 5;
+
+}
+
+h1{
+    display: block;
+    font-size: 40px;
+    font-weight: 900;
+    color: #3d535f;
+
+}
+
+/* THE GRADIENT BALLS */
+.wrapper::before{
+    height: 500px;
+    width: 500px;
+    left: -12%;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-35deg);
-    width: 160%;
-    filter: saturate(200%);
-    animation: animate 4s linear infinite;
+    animation: object1 6s linear infinite;
+}
+.wrapper::after{
+    height: 70px;
+    width: 70px;
+    left: 70%;
+}
+@keyframes object1{
+    50%{
+        left: -13%;
+        top:46%;
+    }
+}
+
+.imgbox{
+    display: none; /* Hide the image */
+  }
+    
+}
+
+@media (max-width: 480px) {
+    /* MULTITEXT SECTION */
+    nav{
+        padding-left: 0px;
+        padding-right: 0px;
+        line-height: 50px;
+    }
+.cols0{
+    margin-top: 48px;
+    width: auto;
+    z-index: 5;
+
+}
+
+h1{
+    display: block;
+    font-size: 30px;
+    font-weight: 900;
+    color: #3d535f;
+
+}
+.topline{
+    font-size: 14px;
+    
+}
+.topline::after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 16px;
+    bottom: 5px;
+    background-color:#7f00ff ;
+}
+.primarybtn{
+    margin: 16px 5px;
+}
+.secondarybtn{
+    margin: 16px 5px;
 }
 
 
-@keyframes animate {
-    50%{
-        right:49%;
-        top: 51%;
-    }
-    
-} */
+}
